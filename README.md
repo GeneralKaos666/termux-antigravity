@@ -61,10 +61,11 @@ Después de instalar, abre el menú con:
   ─────────────────────────────────────────────────
 
     1  ▶  Iniciar Antigravity
-    2  ↻  Actualizar Antigravity
+    2  ↻  Actualizar IDE (v1.23.2)
     3  ■  Detener y limpiar sesión
-    4  ⚙  Abrir Debian (terminal)
-    5  ✕  Desinstalar Antigravity
+    4  ⚙  Terminal Debian (root)
+    5  ☁  Actualizar Script (GitHub)
+    6  ✕  Desinstalar Antigravity
 
   ─────────────────────────────────────────────────
     0  Salir
@@ -77,17 +78,24 @@ Después de instalar, abre el menú con:
 
 **1 ▶ Iniciar** — entra a Debian como `devroom` y lanza Antigravity IDE con X11, Fluxbox y Thunar.
 
-**2 ↻ Actualizar** — descarga la nueva versión del binario ARM64, hace backup de tus scripts y configuración, reemplaza solo el binario y restaura todo lo demás.
+**2 ↻ Actualizar IDE** — descarga la nueva versión del binario ARM64 (v1.23.2), realiza backups de seguridad y restaura tu configuración automáticamente.
 
-**3 ■ Detener y limpiar** — tres niveles: solo matar procesos / + limpiar logs / + limpiar logs y caché completa.
+**3 ■ Detener y limpiar** — tres niveles de limpieza: solo procesos / + logs / + caché completa.
 
-**4 ⚙ Terminal Debian** — acceso directo a Debian como root para administración.
+**4 ⚙ Terminal Debian** — acceso directo a Debian como root para administración avanzada.
 
-**5 ✕ Desinstalar** — dos modos (conservar datos / eliminar todo) con confirmación obligatoria.
+**5 ☁ Actualizar Script** — **NUEVO:** busca y descarga la última versión del menú directamente desde GitHub.
+
+**6 ✕ Desinstalar** — elimina Antigravity con opción de conservar o borrar todos los datos de usuario.
 
 ---
 
 ## 🏗️ Cómo funciona
+
+El instalador ha sido modernizado para ser **totalmente automático** y robusto:
+- **Validación de Sistema:** Verifica arquitectura ARM64 y espacio en disco (4GB min).
+- **Instalación Silenciosa:** Configura Debian y paquetes internos sin requerir intervención del usuario.
+- **Manejo de Errores:** Incluye `set -e` y validaciones en cada paso crítico.
 
 ```
 Termux
