@@ -100,12 +100,12 @@ proot-distro login debian -- sh -c "
 info "Creando scripts de ayuda..."
 
 # Script GUI (dentro de Antigravity)
-cat > "$DEBIAN_ROOT/Apps/IDE/Antigravity/antigravity.sh" << 'EOF'
+cat > "$DEBIAN_ROOT/Apps/IDE/Antigravity/launch-ide.sh" << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity && \
 termux-x11 -xstartup "bash -c 'fluxbox & thunar & /Apps/IDE/Antigravity/bin/antigravity --no-sandbox && sleep infinity'"
 EOF
-chmod +x "$DEBIAN_ROOT/Apps/IDE/Antigravity/antigravity.sh"
+chmod +x "$DEBIAN_ROOT/Apps/IDE/Antigravity/launch-ide.sh"
 
 # Script de inicio para devroom
 cat > "$DEBIAN_ROOT/Apps/IDE/Antigravity/startantigravity.sh" << 'EOF'
@@ -120,7 +120,7 @@ echo -e "3. Salir"
 echo -e "--------------------"
 read -r -n 1 option
 case "$option" in
-    1) /Apps/IDE/Antigravity/antigravity.sh ;;
+    1) /Apps/IDE/Antigravity/launch-ide.sh ;;
     2) /Apps/IDE/Antigravity/uninstall.sh ;;
     *) exit 0 ;;
 esac
