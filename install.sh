@@ -26,7 +26,7 @@ GLIBC_BASE="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLI
 GLIBC_KEY="https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub"
 
 # URL del binario oficial ARM64 de Antigravity
-ANTIGRAVITY_URL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.16.5-6703236727046144/linux-arm/Antigravity.tar.gz"
+ANTIGRAVITY_URL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/linux-arm/Antigravity.tar.gz"
 INSTALL_DIR="/opt/antigravity"
 
 clear

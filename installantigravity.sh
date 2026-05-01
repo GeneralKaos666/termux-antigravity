@@ -68,7 +68,7 @@ mkdir -p "$DEBIAN_ROOT/Apps/IDE"
 cd "$DEBIAN_ROOT/Apps/IDE" || exit 1
 
 aria2c -x 4 -o Antigravity.tar.gz \
-    "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.16.5-6703236727046144/linux-arm/Antigravity.tar.gz"
+    "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/linux-arm/Antigravity.tar.gz"
 
 # ── PASO 5: Extraer e instalar ───────────────────────────────
 clear
@@ -232,7 +232,7 @@ DEBIAN_ROOT="$PREFIX/var/lib/proot-distro/installed-rootfs/debian"
 ANTIGRAVITY_BIN="$DEBIAN_ROOT/Apps/IDE/Antigravity/bin/antigravity"
 ANTIGRAVITY_DIR="$DEBIAN_ROOT/Apps/IDE/Antigravity"
 CONFIG_DIR="$DEBIAN_ROOT/home/devroom/.antigravity"
-ANTIGRAVITY_DL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.16.5-6703236727046144/linux-arm/Antigravity.tar.gz"
+ANTIGRAVITY_DL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/linux-arm/Antigravity.tar.gz"
 RESET='\e[0m'; BOLD='\e[1m'; GRAY='\e[90m'; WHITE='\e[97m'
 RED='\e[91m'; GREEN='\e[92m'; YELLOW='\e[93m'; MAGENTA='\e[95m'; CYAN='\e[96m'
 print_line()      { echo -e "${GRAY}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"; }
