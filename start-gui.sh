@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # ============================================================
-#  Termux-Antigravity · Inicio del Entorno Gráfico
-#  Autor: @maka0024 (kuromi04)
-#  Ejecutar desde Termux: ./start-gui.sh
+#  Termux-Antigravity · Start of the Graphical Environment
+#  Author: @maka0024 (kuromi04)
+#  Run from Termux: ./start-gui.sh
 # ============================================================
 
 G='\033[0;32m'; C='\033[0;36m'; Y='\033[1;33m'; R='\033[0;31m'; NC='\033[0m'
@@ -12,43 +12,43 @@ success() { echo -e "${G}[OK]${NC}    $1"; }
 warn()    { echo -e "${Y}[WARN]${NC}  $1"; }
 error()   { echo -e "${R}[ERROR]${NC} $1"; exit 1; }
 
-# --- Verificar dependencias ---
+# --- Check dependencies ---
 for cmd in termux-x11 pulseaudio xdpyinfo termux-docker-qemu; do
     command -v "$cmd" &>/dev/null \
-        || error "Falta '$cmd'. Ejecuta primero: ./install.sh"
+        || error "Missing '$cmd'. Run first: ./install.sh"
 done
 
-# --- Limpiar sesiones previas ---
-info "Limpiando sesiones anteriores..."
+# --- Clean previous sessions ---
+info "Cleaning previous sessions..."
 pkill termux-x11 2>/dev/null || true
 pkill pulseaudio  2>/dev/null || true
 sleep 1
 
 # --- PulseAudio ---
-info "Iniciando PulseAudio..."
+info "Starting PulseAudio..."
 pulseaudio --start --exit-idle-time=-1 --daemonize=true 2>/dev/null \
-    || warn "PulseAudio no pudo iniciarse. Continuando sin audio."
+    || warn "PulseAudio could not start. Continuing without audio."
 
-# --- Variables X11 ---
+# --- X11 variables ---
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
 export XDG_RUNTIME_DIR="${TMPDIR:-/data/data/com.termux/files/usr/tmp}"
 
-# --- Iniciar Termux:X11 ---
-info "Iniciando Termux:X11..."
+# --- Start Termux:X11 ---
+info "Starting Termux:X11..."
 am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null || true
 termux-x11 :1 &>/dev/null &
 
-# Esperar hasta 20s que X11 esté disponible
+# Wait up to 20s for X11 to be available
 WAITED=0
-info "Esperando que X11 esté listo..."
+info "Waiting for X11 to be ready..."
 until xdpyinfo -display :1 &>/dev/null 2>&1; do
     sleep 1
     WAITED=$((WAITED + 1))
-    [ "$WAITED" -ge 20 ] && error "X11 no respondió en 20s. ¿Está abierta la app Termux:X11?"
+    [ "$WAITED" -ge 20 ] && error "X11 did not respond within 20s. Is the Termux:X11 app open?"
 done
-success "X11 listo (${WAITED}s)."
+success "X11 ready (${WAITED}s)."
 
-# --- Lanzar Antigravity en Alpine ---
+# --- Launch Antigravity in Alpine ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 bash "${SCRIPT_DIR}/antigravity.sh"

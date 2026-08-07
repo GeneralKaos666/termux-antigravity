@@ -1,10 +1,10 @@
 # Contributing to Termux-Antigravity
 
-¡Gracias por querer mejorar este instalador! 
+Thanks for wanting to improve this installer!
 
-### Cómo contribuir:
-1. **Reportar errores:** Abre un "Issue" describiendo el problema y tu modelo de dispositivo.
-2. **Mejoras de Script:** Si optimizas el rendimiento de X11 o la aceleración gráfica, envía un Pull Request.
-3. **Documentación:** Si encuentras un paso confuso, siéntete libre de corregir el README.
+### How to contribute:
+1. **Report bugs:** Open an "Issue" describing the problem and your device model.
+2. **Script improvements:** If you optimize X11 performance or graphics acceleration, send a Pull Request.
+3. **Documentation:** If you find a confusing step, feel free to fix the README.
 
-**Nota:** Mantén el código limpio y comenta los cambios importantes en los scripts de Bash.
+**Note:** Keep the code clean and comment important changes in the Bash scripts.

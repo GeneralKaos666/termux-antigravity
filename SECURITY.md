@@ -1,7 +1,7 @@
 # Security Policy
 
 ## Supported Versions
-Solo se da soporte a la última versión disponible en este repositorio.
+Only the latest version available in this repository is supported.
 
 ## Reporting a Vulnerability
-Si encuentras un fallo de seguridad en este script de instalación, por favor abre un Issue o contacta directamente a través de GitHub. No utilices este software para fines ilícitos.
+If you find a security vulnerability in this installer script, please open an Issue or contact us directly through GitHub. Do not use this software for illicit purposes.

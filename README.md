@@ -11,17 +11,17 @@
 
 <br/>
 
-> **Google Antigravity IDE en Android con un solo comando.**  
-> Corre Debian dentro de Termux vía `proot-distro`, descarga el binario oficial ARM64  
-> y gestiona todo desde un menú interactivo profesional.
+> **Google Antigravity IDE on Android with a single command.**  
+> Runs Debian inside Termux via `proot-distro`, downloads the official ARM64 binary  
+> and manages everything from a professional interactive menu.
 
 </div>
 
 ---
 
-## ⚡ Instalación — Un solo comando
+## ⚡ Installation — One single command
 
-Abre **Termux** y pega esto:
+Open **Termux** and paste this:
 
 ```bash
 curl -H 'Cache-Control: no-cache' -o installantigravity.sh \
@@ -32,13 +32,13 @@ curl -H 'Cache-Control: no-cache' -o installantigravity.sh \
   && clear
 ```
 
-Al terminar, el menú principal se abre **automáticamente**.
+When it finishes, the main menu opens **automatically**.
 
 ---
 
-## 🖥️ Menú interactivo
+## 🖥️ Interactive menu
 
-Después de instalar, abre el menú con:
+After installing, open the menu with:
 
 ```bash
 ./antigravity.sh
@@ -51,58 +51,58 @@ Después de instalar, abre el menú con:
   ║   Termux · Debian · Android · ARM64           ║
   ║                                               ║
   ╠═══════════════════════════════════════════════╣
-  ║  Autor   @maka0024 · kuromi04                 ║
+  ║  Author  @maka0024 · kuromi04                 ║
   ║  GitHub  kuromi04/termux-antigravity          ║
-  ║  Estado  ● Instalado                          ║
+  ║  Status  ● Installed                          ║
   ╚═══════════════════════════════════════════════╝
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    MENÚ PRINCIPAL
+    MAIN MENU
   ─────────────────────────────────────────────────
 
-    1  ▶  Iniciar Antigravity
-    2  ↻  Actualizar IDE (v1.23.2)
-    3  ■  Detener y limpiar sesión
+    1  ▶  Start Antigravity
+    2  ↻  Update IDE (v1.23.2)
+    3  ■  Stop and clean session
     4  ⚙  Terminal Debian (root)
-    5  ☁  Actualizar Script (GitHub)
-    6  ✕  Desinstalar Antigravity
+    5  ☁  Update Script (GitHub)
+    6  ✕  Uninstall Antigravity
 
   ─────────────────────────────────────────────────
-    0  Salir
+    0  Exit
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ---
 
-## ✨ Funciones del menú
+## ✨ Menu features
 
-**1 ▶ Iniciar** — entra a Debian como `devroom` y lanza Antigravity IDE con X11, Fluxbox y Thunar.
+**1 ▶ Start** — opens a `devroom` Debian session and launches Antigravity IDE with X11, Fluxbox and Thunar.
 
-**2 ↻ Actualizar IDE** — descarga la nueva versión del binario ARM64 (v1.23.2), realiza backups de seguridad y restaura tu configuración automáticamente.
+**2 ↻ Update IDE** — downloads the new ARM64 binary version (v1.23.2), makes safety backups and restores your configuration automatically.
 
-**3 ■ Detener y limpiar** — tres niveles de limpieza: solo procesos / + logs / + caché completa.
+**3 ■ Stop and clean** — three levels of cleanup: processes only / + logs / + full cache.
 
-**4 ⚙ Terminal Debian** — acceso directo a Debian como root para administración avanzada.
+**4 ⚙ Debian terminal** — direct access to Debian as root for advanced administration.
 
-**5 ☁ Actualizar Script** — **NUEVO:** busca y descarga la última versión del menú directamente desde GitHub.
+**5 ☁ Update Script** — **NEW:** looks up and downloads the latest version of the menu directly from GitHub.
 
-**6 ✕ Desinstalar** — elimina Antigravity con opción de conservar o borrar todos los datos de usuario.
+**6 ✕ Uninstall** — removes Antigravity with the option to keep or delete all user data.
 
 ---
 
-## 🏗️ Cómo funciona
+## 🏗️ How it works
 
-El instalador ha sido modernizado para ser **totalmente automático** y robusto:
-- **Validación de Sistema:** Verifica arquitectura ARM64 y espacio en disco (4GB min).
-- **Instalación Silenciosa:** Configura Debian y paquetes internos sin requerir intervención del usuario.
-- **Manejo de Errores:** Incluye `set -e` y validaciones en cada paso crítico.
+The installer has been modernized to be **fully automatic** and robust:
+- **System Validation:** Checks ARM64 architecture and disk space (4GB min).
+- **Silent Installation:** Sets up Debian and internal packages without requiring user intervention.
+- **Error Handling:** Includes `set -e` and validations on every critical step.
 
 ```
 Termux
 ├── proot-distro
 │   └── Debian
-│       ├── fluxbox + thunar        ← escritorio gráfico
-│       ├── usuario devroom         ← entorno aislado
+│       ├── fluxbox + thunar        ← graphical desktop
+│       ├── devroom user            ← isolated environment
 │       └── /Apps/IDE/Antigravity/
 │           └── bin/antigravity --no-sandbox
 └── Termux:X11 ← display :1
@@ -110,85 +110,85 @@ Termux
 
 ---
 
-## 📋 Requisitos
+## 📋 Requirements
 
 ### Hardware
 
-| Componente | Mínimo | Recomendado |
+| Component | Minimum | Recommended |
 |------------|--------|-------------|
-| **SoC** | Snapdragon 700 / Dimensity 900 | Snapdragon 8+ Gen 1 o superior |
-| **RAM** | 6 GB | 8 GB o más |
-| **Almacenamiento** | 4 GB libres | 8 GB libres |
-| **Pantalla** | 6.5" smartphone | 10.1" tablet |
+| **SoC** | Snapdragon 700 / Dimensity 900 | Snapdragon 8+ Gen 1 or higher |
+| **RAM** | 6 GB | 8 GB or more |
+| **Storage** | 4 GB free | 8 GB free |
+| **Screen** | 6.5" smartphone | 10.1" tablet |
 | **Android** | 10+ | 12+ |
 
 ### Software
 
-- [Termux](https://github.com/termux) — **desde Github**, no desde Play Store
-- [Termux:X11](https://github.com/termux/termux-x11/releases) — servidor gráfico para Android
+- [Termux](https://github.com/termux) — **from GitHub**, not from the Play Store
+- [Termux:X11](https://github.com/termux/termux-x11/releases) — graphical server for Android
 
 ---
 
-## 🗂️ Estructura del repositorio
+## 🗂️ Repository structure
 
 ```
 termux-antigravity/
 ├── .github/
 │   └── workflows/
 │       └── shellcheck.yml
-├── antigravity.sh          ← menú interactivo principal
+├── antigravity.sh          ← main interactive menu
 ├── README.md
 ├── CONTRIBUTING.md
 ├── SECURITY.md
 └── LICENSE
 ```
 
-> `installantigravity.sh` **no está en el repositorio** — se descarga directamente con `curl`
-> al instalarlo y se borra al terminar. El menú `antigravity.sh` sí queda en tu HOME de Termux.
+> `installantigravity.sh` **is not in the repository** — it is downloaded directly with `curl`
+> on install and deleted when done. The `antigravity.sh` menu does stay in your Termux HOME.
 
 ---
 
-## 🔧 Solución de Problemas
+## 🔧 Troubleshooting
 
-**Pantalla negra en Termux:X11**
-Abre la app Termux:X11 manualmente antes de elegir "Iniciar".
+**Black screen in Termux:X11**
+Open the Termux:X11 app manually before choosing "Start".
 
-**Error al descargar Antigravity**
-El binario pesa ~300 MB. Verifica tu conexión y ejecuta de nuevo el instalador.
+**Error downloading Antigravity**
+The binary weighs ~300 MB. Check your connection and run the installer again.
 
-**El menú no se abre al terminar la instalación**
-Ejecuta manualmente: `./antigravity.sh`
+**The menu doesn't open when the installation finishes**
+Run it manually: `./antigravity.sh`
 
-**Debian no arranca**
+**Debian doesn't start**
 ```bash
 proot-distro list
-proot-distro install debian   # si no aparece
+proot-distro install debian   # if it doesn't appear
 ```
 
 ---
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-Lee [CONTRIBUTING.md](CONTRIBUTING.md). Pull Requests bienvenidos para actualización del binario ARM64 y mejoras en el menú.
-
----
-
-## 🛡️ Seguridad y Ética
-
-Distribuido **únicamente con fines educativos**, bajo los principios de Hacking Ético de [I-HAKLAB](https://github.com/ivam3/i-Haklab).
+Read [CONTRIBUTING.md](CONTRIBUTING.md). Pull Requests welcome for updating the ARM64 binary and improving the menu.
 
 ---
 
-## 💜 Créditos
+## 🛡️ Security and Ethics
 
-- **[ivam3](https://github.com/ivam3)** — por sus enseñanzas y la comunidad [ivam3bycinderella](https://github.com/ivam3).
+Distributed **for educational purposes only**, under the Ethical Hacking principles of [I-HAKLAB](https://github.com/ivam3/i-Haklab).
 
-- **Comunidad Termux** — por mantener un ecosistema Linux increíble en Android.
+---
+
+## 💜 Credits
+
+- **[ivam3](https://github.com/ivam3)** — for his teachings and the [ivam3bycinderella](https://github.com/ivam3) community.
+
+- **Termux Community** — for maintaining an amazing Linux ecosystem on Android.
 
 ---
 
 <div align="center">
 
-Desarrollado con 💜 por **[@maka0024 · kuromi04](https://github.com/kuromi04)**
+Developed with 💜 by **[@maka0024 · kuromi04](https://github.com/kuromi04)**
 
 </div>
